@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <KeyMaps lastUsed="Default">
     <!--    If you're trying to edit this file, the IDs needed are specific to cryengine and the positions and sizes are stored in a display agnostic format. Please use the editor built into the mod :D -->
-    <KeyMap name="Default" overlayPos="0.017361,0.634722" overlaySize="0.734028,0.325000" outlineColor="1.000000,1.000000,1.000000,0.588235" fillColor="0.000000,0.000000,0.000000,0.274510" textColor="1.000000,1.000000,1.000000,0.788235">
+    <KeyMap name="Default" overlayPos="0.017361,0.609722" overlaySize="0.734028,0.325000" outlineColor="1.000000,1.000000,1.000000,0.588235" fillColor="0.000000,0.000000,0.000000,0.274510" textColor="1.000000,1.000000,1.000000,0.788235">
         <Key id="0x0" pos="0.025694,0.018750" size="0.058333,0.043750" />
         <Key id="0xF" pos="0.140278,0.034722" size="0.041667,0.041667" />
         <Key id="0x10" pos="0.187500,0.027083" size="0.050000,0.050000" />
