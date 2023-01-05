@@ -76,7 +76,7 @@ private:
     std::unique_ptr<OverlayInputListener> m_pOverlayInputListener;
 
     fs::path m_KeyMapDocPath = "Mods/config/InputOverlay/KeyMaps.xml";
-    fs::path m_DefaultKeyMapDocPath = "Mods/thelivingdiamond.InputOverlay/DefaultKeyMaps.xml";
+    fs::path m_DefaultKeyMapDocPath = "Mods/thelivingdiamond.InputOverlay/KeyMaps_Default.xml";
 
     pugi::xml_document m_KeyMapDoc;
     pugi::xml_node m_KeyMapRoot;
