@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<KeyMaps lastUsed="Default">
+    <!--    If you're trying to edit this file, the IDs needed are specific to cryengine and the positions and sizes are stored in a display agnostic format. Please use the editor built into the mod :D -->
+    <KeyMap name="Default" overlayPos="0.017361,0.634722" overlaySize="0.734028,0.325000" outlineColor="1.000000,1.000000,1.000000,0.588235" fillColor="0.000000,0.000000,0.000000,0.274510" textColor="1.000000,1.000000,1.000000,0.788235">
+        <Key id="0x0" pos="0.025694,0.018750" size="0.058333,0.043750" />
+        <Key id="0xF" pos="0.140278,0.034722" size="0.041667,0.041667" />
+        <Key id="0x10" pos="0.187500,0.027083" size="0.050000,0.050000" />
+        <Key id="0x11" pos="0.242361,0.034722" size="0.041667,0.041667" />
+        <Key id="0x1B" pos="0.325000,0.109028" size="0.081944,0.041667" />
+        <Key id="0x1C" pos="0.020139,0.169444" size="0.068750,0.050000" />
+        <Key id="0x1D" pos="0.131944,0.081250" size="0.050000,0.050000" />
+        <Key id="0x1E" pos="0.187500,0.081250" size="0.050000,0.050000" />
+        <Key id="0x1F" pos="0.242361,0.081250" size="0.050000,0.050000" />
+        <Key id="0x20" pos="0.327778,0.047917" size="0.050000,0.050000" />
+        <Key id="0x29" pos="0.019444,0.114583" size="0.080556,0.050000" />
+        <Key id="0x38" pos="0.119444,0.172222" size="0.224306,0.050000" />
+        <Key id="0x100" pos="0.442361,0.038194" size="0.034722,0.079861" />
+        <Key id="0x101" pos="0.483333,0.038194" size="0.034722,0.080556" />
+        <Key id="0x102" pos="0.441667,0.122917" size="0.077083,0.034722" />
+        <Key id="0x108" pos="0.525694,0.039583" size="0.064583,0.041667" />
+        <Key id="0x109" pos="0.525694,0.085417" size="0.064583,0.041667" />
+        <MouseVisualizer pos="0.428472,0.170139" size="0.100000,0.100000" />
+    </KeyMap>
+</KeyMaps>

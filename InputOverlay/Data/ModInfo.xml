@@ -1,0 +1,9 @@
+<Mod
+        modName="thelivingdiamond.InputOverlay"
+        displayName="Input Overlay"
+        version="1.0.0"
+        dllName="InputOverlay.dll"
+        hasXML="false"
+        hasLevelXML="false"
+        author="thelivingdiamond">
+</Mod>
