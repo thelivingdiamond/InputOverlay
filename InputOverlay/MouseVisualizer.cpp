@@ -11,6 +11,10 @@ void MouseVisualizer::draw(ImDrawList *drawList, ImVec2 windowPos) {
     // draw a circle with an arrow in the middle that points in the direction of the mouse movement, and the size of the line is the magnitude of the mouse movement
     drawList->AddCircleFilled(ImVec2(windowPos.x + compPos.x + compSize.x / 2, windowPos.y + compPos.y + compSize.y / 2), compSize.x / 2, ImGui::ColorConvertFloat4ToU32(m_FillColor), 32);
     drawList->AddCircle(ImVec2(windowPos.x + compPos.x + compSize.x / 2, windowPos.y + compPos.y + compSize.y / 2), compSize.x / 2, ImGui::ColorConvertFloat4ToU32(m_BorderColor), 32, 2.0f);
+    // add quadrant lines to the circle
+    auto quadrantLineColor = ImVec4(m_BorderColor.x, m_BorderColor.y, m_BorderColor.z, m_BorderColor.w * 0.3f);
+    drawList->AddLine(ImVec2(windowPos.x + compPos.x + compSize.x / 2, windowPos.y + compPos.y), ImVec2(windowPos.x + compPos.x + compSize.x / 2, windowPos.y + compPos.y + compSize.y), ImGui::ColorConvertFloat4ToU32(quadrantLineColor), 2.0f);
+    drawList->AddLine(ImVec2(windowPos.x + compPos.x, windowPos.y + compPos.y + compSize.y / 2), ImVec2(windowPos.x + compPos.x + compSize.x, windowPos.y + compPos.y + compSize.y / 2), ImGui::ColorConvertFloat4ToU32(quadrantLineColor), 2.0f);
     ImVec2 arrowStart = ImVec2(windowPos.x + compPos.x + compSize.x / 2, windowPos.y + compPos.y + compSize.y / 2);
     ImVec2 arrowEnd = ImVec2(windowPos.x + compPos.x + compSize.x / 2 + m_MouseDelta.x, windowPos.y + compPos.y + compSize.y / 2 + m_MouseDelta.y);
     float lineWidth = 2.0f;
