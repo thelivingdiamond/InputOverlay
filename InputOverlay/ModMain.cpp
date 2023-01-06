@@ -266,7 +266,8 @@ const ImGuiWindowFlags Overlay_Flags = ImGuiWindowFlags_NoTitleBar |
         ImGuiWindowFlags_NoCollapse |
         ImGuiWindowFlags_NoNav |
         ImGuiWindowFlags_NoBackground |
-        ImGuiWindowFlags_NoBringToFrontOnFocus;
+        ImGuiWindowFlags_NoBringToFrontOnFocus |
+        ImGuiWindowFlags_NoMouseInputs;
 
 
 void ModMain::DrawOverlay() {
