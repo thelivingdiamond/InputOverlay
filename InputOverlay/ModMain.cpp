@@ -4,6 +4,7 @@
 #include "InputNameMap.h"
 #include "OverlayInputListener.h"
 #include "ImGuiUtils.h"
+#include <Chairloader/ModSDK/ChairGlobalModName.h>
 
 ModMain* gMod = nullptr;
 
@@ -58,11 +59,15 @@ void ModMain::InitHooks()
 #endif
 }
 
+static int* pDrawOverlay = nullptr;
+
 void ModMain::InitSystem(const ModInitInfo& initInfo, ModDllInfo& dllInfo)
 {
 	BaseClass::InitSystem(initInfo, dllInfo);
+    ChairSetGlobalModName("InputOverlay");
     LoadKeyMaps();
-	// Your code goes here
+    pDrawOverlay = &m_bDrawOverlay;
+    REGISTER_CVAR2("InputOverlay_ShowOverlay", &m_bDrawOverlay, 1, VF_DUMPTOCHAIR, "Overlay Visibility");
 }
 
 void ModMain::InitGame(bool isHotReloading)
@@ -91,6 +96,7 @@ void ModMain::ShutdownSystem(bool isHotUnloading)
 {
 	// Your code goes here
 	BaseClass::ShutdownSystem(isHotUnloading);
+    gEnv->pConsole->UnregisterVariable("InputOverlay_ShowOverlay");
 }
 
 void ModMain::DrawMenuBar() {
@@ -98,7 +104,10 @@ void ModMain::DrawMenuBar() {
     {
         if (ImGui::BeginMenu("Input Overlay"))
         {
-            ImGui::MenuItem("Show", NULL, &m_bDrawOverlay);
+            bool bDrawOverlay = m_bDrawOverlay;
+            if(ImGui::MenuItem("Show", nullptr, &bDrawOverlay)){
+                m_bDrawOverlay = bDrawOverlay;
+            }
             ImGui::MenuItem("Settings", NULL, &m_bDrawSettings);
             ImGui::EndMenu();
         }
@@ -275,7 +284,7 @@ void ModMain::DrawOverlay() {
 
     ImGui::SetNextWindowPos(ImVec2{m_vOverlayPos.x * ImGui::GetDisplayScalar(), m_vOverlayPos.y * ImGui::GetDisplayScalar()});
     ImGui::SetNextWindowSize(ImVec2{m_vOverlaySize.x * ImGui::GetDisplayScalar(), m_vOverlaySize.y * ImGui::GetDisplayScalar()});
-    if(ImGui::Begin("Input Overlay", &m_bDrawOverlay, Overlay_Flags)) {
+    if(ImGui::Begin("Input Overlay", (bool*)&m_bDrawOverlay, Overlay_Flags)) {
         ImDrawList* draw_list = ImGui::GetWindowDrawList();
         // draw a rectangle around the window when the settings window is open
         ImVec2 min = ImGui::GetWindowContentRegionMin();

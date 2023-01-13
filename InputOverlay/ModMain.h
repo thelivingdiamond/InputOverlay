@@ -65,7 +65,7 @@ private:
 
 
     bool m_bDrawSettings = false;
-    bool m_bDrawOverlay = true;
+    int m_bDrawOverlay = true;
 
     ImVec2 m_vOverlayPos = ImVec2(0.3f, 0.5f);
     ImVec2 m_vOverlaySize = ImVec2(0.3f, 0.5f);
