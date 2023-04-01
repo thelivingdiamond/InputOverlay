@@ -30,6 +30,4 @@ This is an input visualizer overlay mod for the game Prey (2017) made using the 
 This mod was created by thelivingdiamond using the open source [Chairloader](https://github.com/thelivingdiamond/Chairloader) modding framework.
 ## License
 
-This mod is licensed under the [MIT License](LICENSE).```
-
-Note: You'll need to replace "your-username" with your actual Github username in the URLs provided. Also, make sure to replace the contents of the README with actual information about your mod.
+This mod is licensed under the GNU GPL-V3.0 license
