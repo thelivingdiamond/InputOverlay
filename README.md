@@ -8,6 +8,10 @@ This is an input visualizer overlay mod for the game Prey (2017) made using the 
 - Customizable color and opacity options for the overlay.
 - Fully customize which keys and mouse inputs are displayed. 
 - Easy to install and use with the Chairloader modding framework.
+![Input Overlay Img](https://user-images.githubusercontent.com/11778849/229263962-7c364b14-ac23-4422-a992-59f62390f4c3.png)
+
+
+![Input Overlay Settings](https://user-images.githubusercontent.com/11778849/229263964-1ea65a63-0d9c-4f21-a3d4-3434040496c5.png)
 
 ## Installation
 
